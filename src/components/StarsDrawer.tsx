@@ -1,7 +1,16 @@
 import { Circle } from 'react-konva';
 import type { StarProps } from '../types/StarProperties';
 import MemoryStar from './MemoryStar';
-const StarsDrawer: React.FC<{ stars: StarProps[] }> = ({ stars }) => {
+export interface StarsDrawerProps {
+    stars: StarProps[];
+    onStarHover: (star: StarProps | null) => void;
+    onStarClick?: () => void;
+}
+const StarsDrawer: React.FC<StarsDrawerProps> = ({
+    stars,
+    onStarClick,
+    onStarHover,
+}) => {
     return (
         <>
             {stars.map((star: StarProps, index) => {
@@ -11,9 +20,10 @@ const StarsDrawer: React.FC<{ stars: StarProps[] }> = ({ stars }) => {
                         onStarClick={() =>
                             console.log(`Click Star: ${JSON.stringify(star)}`)
                         }
-                        onStarHover={() =>
-                            console.log(`Hover Star: ${JSON.stringify(star, null, 4)}`)
-                        }
+                        onStarHover={(star: StarProps | null) => {
+                            onStarHover(star);
+                            console.log(`Hover Star: ${JSON.stringify(star, null, 4)}`);
+                        }}
                     />
                 );
             })}

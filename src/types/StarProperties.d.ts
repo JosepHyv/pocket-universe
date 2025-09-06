@@ -4,4 +4,6 @@ export  type StarProps = {
     y: number;
     starName: string;
     discoveryDate: Date;
+    starTitle?: string; 
+    dedication: string;
 };
