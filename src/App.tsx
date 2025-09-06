@@ -1,12 +1,14 @@
-import { useState, useEffect } from 'react';
-import { Stage, Layer, Rect, Text, Circle } from 'react-konva';
+import { useState, useEffect, useMemo } from 'react';
+import { Stage, Layer, Rect, Text } from 'react-konva';
 import type { StarProps } from './types/StarProperties';
 import StarsDrawer from './components/StarsDrawer';
 import PrevisualizationModal from './components/PrevisualizationModal';
 import DedicationModal from './components/DedicationModal';
-import ConstelationDrawer, {
-    type Coordinates,
-} from './components/ConstelationDrawer';
+import ConstelationDrawer from './components/ConstelationDrawer';
+import { staticStars } from './data/constellation';
+import { generateConstellation } from './utils/graphGenerator';
+import Header from './components/Header';
+import ExploreButton from './components/ExploreButton';
 type WindowSize = {
     width: number;
     height: number;
@@ -37,9 +39,22 @@ const useWindowSize = (): WindowSize => {
 function App() {
     const windowSize = useWindowSize();
 
+    const runtimeStars = useMemo(() => {
+        return staticStars.map((star) => ({
+            ...star,
+            x: star.x * windowSize.width,
+            y: star.y * windowSize.height,
+        }));
+    }, [windowSize]);
+
+    const constelationCoors = useMemo(
+        () => generateConstellation(runtimeStars),
+        [runtimeStars]
+    );
+
     const [hoveredStar, setHoveredStar] = useState<StarProps | null>(null);
     const [clickedStar, setClickedStar] = useState<StarProps | null>(null);
-    const [starCoordinates, setStarCoordinates] = useState<Coordinates[]>([]);
+
     const handleStarClick = (star: StarProps | null) => {
         setClickedStar(star);
     };
@@ -50,89 +65,19 @@ function App() {
     const handleStarHover = (star: StarProps | null) => {
         setHoveredStar(star);
     };
-    const Stars: StarProps[] = [
-        {
-            x: windowSize.width / 2,
-            y: windowSize.height / 2,
-            starName: 'stellar 13',
-            discoveryDate: new Date(),
-            dedication: 'prueba de dedicatoria',
-        },
-        {
-            x: windowSize.width / 3,
-            y: windowSize.height / 3,
-            starName: 'stellar 14',
-            discoveryDate: new Date(),
-            dedication: 'prueba de dedicatoria',
-        },
-        {
-            x: windowSize.width / 4,
-            y: windowSize.height / 4,
-            starName: 'stellar 15',
-            dedication: 'prueba de dedicatoria',
-            discoveryDate: new Date(),
-        },
 
-        {
-            x: windowSize.width / 5,
-            y: windowSize.height / 5,
-            starName: 'stellar 15',
-            discoveryDate: new Date(),
-            dedication: 'prueba de dedicatoria',
-        },
-
-        {
-            x: windowSize.width / 6,
-            y: windowSize.height / 6,
-            starName: 'stellar 16',
-            discoveryDate: new Date(),
-            dedication: 'prueba de dedicatoria',
-        },
-    ];
-
-    const constelationCoors: Coordinates[] = [];
-    for (let c = 0; c < Stars.length - 1; c++) {
-        const star1 = Stars[c];
-        const star2 = Stars[c + 1];
-        constelationCoors.push({
-            x1: star1.x,
-            y1: star1.y,
-            x2: star2.x,
-            y2: star2.y,
-        });
-    }
     return (
         <>
+            <Header />
+            <ExploreButton/>
+            
             <Stage width={windowSize.width} height={windowSize.height}>
                 <Layer>
-                    <Rect
-                        x={20}
-                        y={20}
-                        width={100}
-                        height={100}
-                        fill='#00D2FF'
-                        shadowBlur={10}
-                    />
-                    <Text text='Superior Izquierda' x={20} y={130} fill='white' />
                     <ConstelationDrawer StarCordinates={constelationCoors} />
                     <StarsDrawer
-                        stars={Stars}
+                        stars={runtimeStars}
                         onStarHover={handleStarHover}
                         onStarClick={handleStarClick}
-                    />
-                    <Rect
-                        x={windowSize.width - 120}
-                        y={windowSize.height - 120}
-                        width={100}
-                        height={100}
-                        fill='#ff416c'
-                        shadowBlur={10}
-                    />
-                    <Text
-                        text='Inferior Derecha'
-                        x={windowSize.width - 120}
-                        y={windowSize.height - 140}
-                        fill='white'
                     />
                 </Layer>
             </Stage>

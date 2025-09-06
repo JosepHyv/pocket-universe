@@ -1,33 +1,26 @@
-import { Circle } from 'react-konva';
 import type { StarProps } from '../types/StarProperties';
 import MemoryStar from './MemoryStar';
-export interface StarsDrawerProps {
+
+// Definimos explícitamente las props que el componente va a recibir.
+interface StarsDrawerProps {
     stars: StarProps[];
+    onStarClick: (star: StarProps) => void;
     onStarHover: (star: StarProps | null) => void;
-    onStarClick: (star: StarProps | null) => void;
 }
-const StarsDrawer: React.FC<StarsDrawerProps> = ({
-    stars,
-    onStarClick,
-    onStarHover,
-}) => {
+
+const StarsDrawer: React.FC<StarsDrawerProps> = ({ stars, onStarClick, onStarHover }) => {
     return (
         <>
-            {stars.map((star: StarProps, index) => {
-                return (
-                    <MemoryStar
-                        {...star}
-                        onStarClick={(star: StarProps | null) => {
-                            onStarClick(star);
-                            console.log(`Click Star: ${JSON.stringify(star)}`);
-                        }}
-                        onStarHover={(star: StarProps | null) => {
-                            onStarHover(star);
-                            console.log(`Hover Star: ${JSON.stringify(star, null, 4)}`);
-                        }}
-                    />
-                );
-            })}
+            {stars.map((star) => (
+                <MemoryStar
+                    // Usamos el id o el nombre como key para un renderizado eficiente
+                    key={star.id ?? star.starName}
+                    {...star}
+                    // Pasamos las funciones recibidas en las props a cada estrella
+                    onStarClick={onStarClick}
+                    onStarHover={onStarHover}
+                />
+            ))}
         </>
     );
 };
