@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Stage, Layer, Rect, Text } from 'react-konva';
+import { Stage, Layer } from 'react-konva';
 import type { StarProps } from './types/StarProperties';
 import StarsDrawer from './components/StarsDrawer';
 import PrevisualizationModal from './components/PrevisualizationModal';
@@ -69,8 +69,8 @@ function App() {
     return (
         <>
             <Header />
-            <ExploreButton/>
-            
+            <ExploreButton />
+
             <Stage width={windowSize.width} height={windowSize.height}>
                 <Layer>
                     <ConstelationDrawer StarCordinates={constelationCoors} />

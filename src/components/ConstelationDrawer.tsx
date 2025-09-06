@@ -19,7 +19,7 @@ const ConstelationDrawer: React.FC<ConstelationProps> = ({
             {StarCordinates.map((starCordinates) => {
                 return (
                     <Line
-                        strokeWidth={1}
+                        strokeWidth={0.5}
                         shadowColor='#fff'
                         stroke='#fff'
                         points={[

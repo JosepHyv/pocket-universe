@@ -34,14 +34,14 @@ export function generateConstellation(stars: StarProps[]): Coordinates[] {
         });
     }
 
-    const firstStar = sortedStars[0];
-    const lastStar = sortedStars[sortedStars.length - 1];
-    connections.push({
-        x1: lastStar.x,
-        y1: lastStar.y,
-        x2: firstStar.x,
-        y2: firstStar.y,
-    });
+    // const firstStar = sortedStars[0];
+    // const lastStar = sortedStars[sortedStars.length - 1];
+    // connections.push({
+    //     x1: lastStar.x,
+    //     y1: lastStar.y,
+    //     x2: firstStar.x,
+    //     y2: firstStar.y,
+    // });
 
     return connections;
 }
