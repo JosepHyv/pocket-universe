@@ -4,7 +4,7 @@ import type { StarProps } from '../types/StarProperties';
 import Konva from 'konva';
 
 interface MemoryStarProps extends StarProps {
-    onStarClick: (star: StarProps) => void;
+    onStarClick: (star: StarProps | null) => void;
     onStarHover: (star: StarProps | null) => void;
 }
 
@@ -12,13 +12,9 @@ const BASE_RADIUS = 8;
 const BASE_SHADOW_BLUR = 20;
 
 const MemoryStar: React.FC<MemoryStarProps> = ({
-    id,
-    x,
-    y,
-    discoveryDate,
-    starName,
     onStarClick,
     onStarHover,
+    ...star
 }) => {
     const starRef = useRef<Konva.Circle>(null);
     const pulseTweenRef = useRef<Konva.Tween | null>(null);
@@ -57,11 +53,11 @@ const MemoryStar: React.FC<MemoryStarProps> = ({
             duration: 0.3,
             easing: Konva.Easings.EaseInOut,
             shadowBlur: BASE_SHADOW_BLUR * (1 + (Math.random() * 0.15 + 0.75)),
-            scaleX: 1.5, // Un pequeño zoom para feedback visual
+            scaleX: 1.5, 
             scaleY: 1.5,
             fill: '#FFD700',
         });
-        onStarHover({ id, x, y, discoveryDate, starName });
+        onStarHover(star); //{ id, x, y, discoveryDate, starName });
     };
 
     const handleMouseLeave = (e: Konva.KonvaEventObject<MouseEvent>) => {
@@ -82,14 +78,14 @@ const MemoryStar: React.FC<MemoryStarProps> = ({
     };
 
     const handleClick = () => {
-        onStarClick({ id, x, y, discoveryDate, starName });
+        onStarClick(star); //{ id, x, y, discoveryDate, starName });
     };
 
     return (
         <Circle
             ref={starRef}
-            x={x}
-            y={y}
+            x={star.x}
+            y={star.y}
             radius={BASE_RADIUS}
             fill={'#fff'}
             shadowColor={'#fff'}

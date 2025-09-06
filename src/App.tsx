@@ -35,7 +35,15 @@ function App() {
     const windowSize = useWindowSize();
 
     const [hoveredStar, setHoveredStar] = useState<StarProps | null>(null);
+    const [clickedStar, setClickedStar] = useState<StarProps | null>(null); 
 
+    const handleStarClick = (star: StarProps | null) => {
+        setClickedStar(star);
+    }
+
+    const handleCloseModal = () => {
+        setClickedStar(null);
+    }
     const handleStarHover = (star: StarProps | null) => {
         setHoveredStar(star);
     };
@@ -45,17 +53,20 @@ function App() {
             y: windowSize.height / 2,
             starName: 'stellar 13',
             discoveryDate: new Date(),
+            dedication: "prueba de dedicatoria",
         },
         {
             x: windowSize.width / 3,
             y: windowSize.height / 3,
             starName: 'stellar 14',
             discoveryDate: new Date(),
+            dedication: "prueba de dedicatoria",
         },
         {
             x: windowSize.width / 4,
             y: windowSize.height / 4,
             starName: 'stellar 15',
+            dedication: "prueba de dedicatoria",
             discoveryDate: new Date(),
         },
 
@@ -64,6 +75,7 @@ function App() {
             y: windowSize.height / 5,
             starName: 'stellar 15',
             discoveryDate: new Date(),
+            dedication: "prueba de dedicatoria",
         },
 
         {
@@ -71,6 +83,7 @@ function App() {
             y: windowSize.height / 6,
             starName: 'stellar 16',
             discoveryDate: new Date(),
+            dedication: "prueba de dedicatoria",
         },
     ];
     return (
@@ -92,7 +105,7 @@ function App() {
                         width={15}
                         fill='#fff'
                     />
-                    <StarsDrawer stars={Stars} onStarHover={handleStarHover} />
+                    <StarsDrawer stars={Stars} onStarHover={handleStarHover} onStarClick={handleStarClick} />
 
                     <Rect
                         x={windowSize.width - 120}
@@ -111,22 +124,18 @@ function App() {
                 </Layer>
             </Stage>
             <PrevisualizationModal
-                // Si hay una estrella, isActive es true.
                 isActive={!!hoveredStar}
-                // Usamos datos por defecto o los de la estrella para evitar errores
                 x={hoveredStar?.x ?? 0}
                 y={hoveredStar?.y ?? 0}
                 starName={hoveredStar?.starName ?? ''}
-                starTitle={hoveredStar?.starTitle ?? ''} // Asumo que el título está en 'title'
+                starTitle={hoveredStar?.starTitle ?? ''} 
                 discoveryDate={hoveredStar?.discoveryDate ?? new Date()}
             />
-             <DedicationModal
-        isActive={!!clickedStar}
-        star={clickedStar!} // El '!' indica a TS que sabemos que no será nulo aquí
-        dedication={dedicationText}
-        // imageUrl="URL_DE_TU_IMAGEN.jpg" // Descomenta y añade una URL si tienes una foto
-        onClose={handleCloseModal}
-      />
+            <DedicationModal
+                isActive={!!clickedStar}
+                star={clickedStar!} 
+                onClose={handleCloseModal}
+            />
         </>
     );
 }

@@ -1,4 +1,4 @@
-import { useState, memo } from 'react';
+import {  memo } from 'react';
 import styles from '../styles/PrevisualizationModal.module.css';
 export type PrevisualizationProps = {
     isActive: boolean | null;

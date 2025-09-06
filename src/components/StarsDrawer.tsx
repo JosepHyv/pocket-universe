@@ -4,7 +4,7 @@ import MemoryStar from './MemoryStar';
 export interface StarsDrawerProps {
     stars: StarProps[];
     onStarHover: (star: StarProps | null) => void;
-    onStarClick?: () => void;
+    onStarClick: (star: StarProps | null) => void;
 }
 const StarsDrawer: React.FC<StarsDrawerProps> = ({
     stars,
@@ -17,9 +17,10 @@ const StarsDrawer: React.FC<StarsDrawerProps> = ({
                 return (
                     <MemoryStar
                         {...star}
-                        onStarClick={() =>
-                            console.log(`Click Star: ${JSON.stringify(star)}`)
-                        }
+                        onStarClick={(star: StarProps | null) => {
+                            onStarClick(star);
+                            console.log(`Click Star: ${JSON.stringify(star)}`);
+                        }}
                         onStarHover={(star: StarProps | null) => {
                             onStarHover(star);
                             console.log(`Hover Star: ${JSON.stringify(star, null, 4)}`);

@@ -6,4 +6,5 @@ export  type StarProps = {
     discoveryDate: Date;
     starTitle?: string; 
     dedication: string;
+    imageUrl?: string;
 };
