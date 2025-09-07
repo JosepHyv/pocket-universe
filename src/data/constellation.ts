@@ -35,72 +35,71 @@ export const staticStars: StarProps[] = [
         id: 1,
         x: 0.5,
         y: 0.5,
-        starName: 'Corazón de la Galaxia',
+        starName: 'Prima Initia', // (Latín para "El Primer Comienzo")
         discoveryDate: new Date('2025-08-08T00:00:00'),
         dedication:
-            'Este dia inicio una hermosa historia, recuerdo bien que este dia desperte con las piernas temblorosas, preocupado por lo que este dia significaria de ese momento en adelante, me levante temprano, a pesar de haberme desvelado, prepare las cosas para ir a nuestro dia de picnic, habia preparado una linda dinamica y habia repasado como te propondria iniciarla, hice monton de escenarios en mi mente para que todo fuera lo mas especial para ti, cuando llegaste a casa, senti que mi corazon explotaba, tembloroso porque aun no terminaba la comida, llegamos al picnic, disfrutamos, y comenzamos la dinamica, en ella me humillaste dibujando, pero logre decirte todo lo que sentia, fue un dia inolvidable tus lagrimas de alegria y besos con fantasticas obras de arte',
-        starTitle: 'El dia que todo comenzó',
+            'Este día inició una hermosa historia. Recuerdo bien que desperté con las piernas temblorosas, preocupado por lo que este día significaría de ese momento en adelante. Me levanté temprano, a pesar de haberme desvelado, y preparé las cosas para ir a nuestro día de pícnic. Había preparado una linda dinámica y repasado cómo te propondría iniciarla; creé un montón de escenarios en mi mente para que todo fuera lo más especial para ti. Cuando llegaste a casa, sentí que mi corazón explotaba. Tembloroso porque aún no terminaba la comida, llegamos al pícnic, disfrutamos y comenzamos la dinámica. En ella me humillaste dibujando, pero logré decirte todo lo que sentía. Fue un día inolvidable; tus lágrimas de alegría y besos son fantásticas obras de arte.',
+        starTitle: 'El día que todo comenzó',
         imageUrl: CamilaRetrato,
     },
     {
         id: 2,
         ...getRandomClusteredCoordinate(),
-        starName: 'Lyra Nocturna',
+        starName: 'Rosa Caelestis', // (Latín para "Rosa Celestial")
         discoveryDate: new Date('2025-07-25T00:00:00'),
         dedication:
-            'Tuve un viaje con mi mamá a una linda ciudad, ciudad que aunque no hemos visitado al mismo tiempo, no podia dejar de recordarme a ti, en todo momento mi cabeza solo pensaba en ti, y aun con la distancia, seguia aprendiendo mas de ti, ese dia me dijiste sobre el como demostraba mi cariño hacia ti, y coincidimos en que iriamos paso a paso, aun asi, no pude evitar expresarte mi cariño mandandote un pequeño presente, ya que no podria entregartelo en persona, una rosa por cada hora del dia que pensaba en ti.',
+            'Tuve un viaje con mi mamá a una linda ciudad, una que, aunque no hemos visitado al mismo tiempo, no podía dejar de recordarme a ti. En todo momento, mi cabeza solo pensaba en ti y, aun con la distancia, seguía aprendiendo más de ti. Ese día me hablaste sobre cómo te demostraba mi cariño, y coincidimos en que iríamos paso a paso. Aun así, no pude evitar expresarte mi amor mandándote un pequeño presente, ya que no podía entregártelo en persona: una rosa por cada hora del día que pensaba en ti.',
         starTitle: 'Corazones que vencen distancias',
         imageUrl: Julio25,
     },
     {
         id: 3,
         ...getRandomClusteredCoordinate(),
-        starName: 'Orion Minor',
+        starName: 'Felis Major', // (Latín para "Gato Mayor")
         discoveryDate: new Date('2025-07-19T00:00:00'),
         dedication:
-            'Recuerdo muy bien lo que senti este dia, queria que la primer comida que probaras hecha por mis manos fuera deliciosa, recuerdo contarle a mis amigas que no sabia que cocinar, y pase horas pensando que podia prepararte, cuando llegaste me senti tan en paz y feliz de que estuvieras aqui conmigo, desayunamos rico, platicamos y nos seguimos conociendo, disfrutamos de una pelicula y series hasta dar la hora de ir a ver la exposicion de arte hecha con gatitos, fue la primera vez que tomaste mi mano, ya que yo no daba el primer paso, me senti tan feliz cuando te dije ese dia lo que sentia por ti.',
+            'Recuerdo muy bien lo que sentí este día. Quería que la primera comida que probaras hecha por mis manos fuera deliciosa. Recuerdo contarle a mis amigas que no sabía qué cocinar, y pasé horas pensando en qué podía prepararte. Cuando llegaste, me sentí tan en paz y feliz de que estuvieras aquí conmigo. Desayunamos rico, platicamos y nos seguimos conociendo. Disfrutamos de una película y series hasta que dio la hora de ir a ver la exposición de arte hecha con gatitos. Fue la primera vez que tomaste mi mano, ya que yo no daba el primer paso. Me sentí tan feliz cuando, ese día, te dije lo que sentía por ti.',
         starTitle: 'Historia con gatitos y primera foto',
         imageUrl: Julio19,
     },
     {
         id: 4,
         ...getRandomClusteredCoordinate(),
-        starName: 'Vela Azure',
+        starName: 'Nexus Familiae', // (Latín para "Conexión Familiar")
         discoveryDate: new Date('2025-07-29T00:00:00'),
         dedication:
-            'Llegue a casa de tu mamá para conocerla al igual que a tus hermanitos, fue la primera vez que conoceria a esos dulces niños, ese dia iriamos a ver los 4 fantasticos, llegamos como pareja al cine aunque aun no lo heramos, me senti muy feliz, el hecho de pasar ese momento contigo de tu mano, me hacia desear cada vez mas que fueras mi novia, cuidamos niños pero nos llegamos a divertir como nunca, aunque no llegamos a tomarnos mas fotos, quedo retratado nuestro cariño y diversion en el playtime, terminado con una cena rapida mientras platicabamos de resolver problemas matematicos, me senti integrado con tu familia desde ese momento.',
-        starTitle: 'La presentacion',
+            'Llegué a casa de tu mamá para conocerla, al igual que a tus hermanitos. Fue la primera vez que conocería a esos dulces niños. Ese día iríamos a ver "Los 4 Fantásticos"; llegamos como pareja al cine, aunque aún no lo éramos. Me sentí muy feliz. El hecho de pasar ese momento contigo, de tu mano, me hacía desear cada vez más que fueras mi novia. Cuidamos niños, pero nos divertimos como nunca. Aunque no llegamos a tomarnos más fotos, nuestro cariño y diversión quedaron retratados en el Playtime, terminando con una cena rápida mientras platicábamos de resolver problemas matemáticos. Me sentí integrado con tu familia desde ese momento.',
+        starTitle: 'La presentación',
         imageUrl: Julio29,
     },
     {
         id: 5,
         ...getRandomClusteredCoordinate(),
-        starName: 'Gemma Prime',
+        starName: 'Flumen Cordium', // (Latín para "Río de Corazones")
         discoveryDate: new Date('2025-08-01T19:45:00'),
         dedication:
-            'Atesoro este dia en mi corazon, queria verte feliz y sorprenderte con un delicioso almuerzo en un lugar magico, una comida junto al rio que demostrara lo que ya sentia por ti, queria aclarar una duda que estaba en mi mente porque sentia todo tan lindo para ser real, aunque avanzabamos rapido, no me sentia incomodo ni me sentia mal por ello, me sentia enormemente feliz y se me notaba a kilometros, este dia conoci a tus abuelitos y me recibieron amablemente para conocerme, creo que maneje muy bien la situacion, jamas olvidare lo bella que te veias ese dia.',
-        starTitle: 'Rio de corazones',
+            'Atesoro este día en mi corazón. Quería verte feliz y sorprenderte con un delicioso almuerzo en un lugar mágico, una comida junto al río que demostrara lo que ya sentía por ti. Quería aclarar una duda que estaba en mi mente porque sentía todo tan lindo para ser real. Aunque avanzábamos rápido, no me sentía incómodo ni mal por ello; me sentía enormemente feliz y se me notaba a kilómetros. Este día conocí a tus abuelitos y me recibieron amablemente. Creo que manejé muy bien la situación. Jamás olvidaré lo bella que te veías ese día.',
+        starTitle: 'Río de corazones',
         imageUrl: Agosto01,
     },
-
     {
         id: 6,
         ...getRandomClusteredCoordinate(),
-        starName: 'Alariel Umbra',
+        starName: 'Dulcis Harmonia', // (Latín para "Dulce Armonía")
         discoveryDate: new Date('2025-08-02T00:00:00'),
         dedication:
-            'Jamas terminare de agradecer haberte encontrado, haber sido aceptado en tu linda familia, el verte sonreir siempre, este dia creando postres juntos con tus hermanitos, fue el primer dia que me acerque mas a leo y ainara, como si nos conocieramos de mas tiempo, ese dia jugamos trompo, reimos y aunque no logramos probar el postre y al final del dia llegamos a sentirnos abrumados por algunas palabras, nuestra confianza crecio al saber que nos apoyabamos mutuamente, demostrando nuestro cariño sin preocupaciones.',
+            'Jamás terminaré de agradecer haberte encontrado, haber sido aceptado en tu linda familia, el verte sonreír siempre. Este día, creando postres juntos con tus hermanitos, fue el primero en que me acerqué más a Leo y Ainara, como si nos conociéramos de más tiempo. Jugamos al trompo, reímos y, aunque no logramos probar el postre y al final del día llegamos a sentirnos abrumados por algunas palabras, nuestra confianza creció al saber que nos apoyábamos mutuamente, demostrando nuestro cariño sin preocupaciones.',
         starTitle: 'Postres y risas',
         imageUrl: Agosto02,
     },
     {
         id: 7,
         ...getRandomClusteredCoordinate(),
-        starName: 'Cygnus Lux',
+        starName: 'Sidus Inopinatum', // (Latín para "Estrella Inesperada")
         discoveryDate: new Date('2025-08-06T00:00:00'),
         dedication:
-            'Llegamos con la intencion de probar nuevos sabores, descrubiendo nuevos lugares para sonreir, aunque nuestro plan no contemplo un dia inhabil, me diste la oportunidad de llevarte a uno de los lugares que descubri en mis aventuras caminado por la ciudad, me senti tan feliz de saber lo que sentias por mi, que hayas disfrutado ese dia, aclaro todo lo que faltaba por aclarar en mi mente, y comence a planear como daria el siguiente paso para hacerte feliz cada dia desde ese dia.',
-        starTitle: 'Descrubiendo sabores',
+            'Llegamos con la intención de probar nuevos sabores, descubriendo nuevos lugares para sonreír. Aunque nuestro plan no contempló un día inhábil, me diste la oportunidad de llevarte a uno de los lugares que descubrí en mis aventuras caminando por la ciudad. Me sentí tan feliz de saber lo que sentías por mí; que hayas disfrutado ese día aclaró todo lo que faltaba en mi mente, y comencé a planear cómo daría el siguiente paso para hacerte feliz cada día desde entonces.',
+        starTitle: 'Descubriendo sabores',
         imageUrl: Agosto06,
     },
     {
@@ -109,137 +108,137 @@ export const staticStars: StarProps[] = [
         starName: 'Draco Caelum',
         discoveryDate: new Date('2025-08-09T00:00:00'),
         dedication:
-            'Por las historias que imaginamos y los futuros que construiremos, siendo la primer salida como novios, conoci a tus amigas de toda la vida, y ellas me aceptaron en su pequeña familia, un dia divertido en donde descubrimos que no sabia flotar, ese dia, nos adorno un hermoso cielo despejado, el cual en ocaciones volteaba a ver, siempre con la esperanza de que ese no fuera otro de mis sueños, un cielo nuevo en un nuevo comienzo para ambos, cielo en el cual pintariamos nuestra historia, comenzando por una celebracion sobre el agua, gracias por ese dia.',
+            'Por las historias que imaginamos y los futuros que construiremos. Siendo la primera salida como novios, conocí a tus amigas de toda la vida y ellas me aceptaron en su pequeña familia. Un día divertido en donde descubrimos que no sabía flotar. Ese día nos adornó un hermoso cielo despejado, el cual en ocasiones volteaba a ver, siempre con la esperanza de que ese no fuera otro de mis sueños. Un cielo nuevo en un nuevo comienzo para ambos, un cielo en el cual pintaríamos nuestra historia, comenzando por una celebración sobre el agua. Gracias por ese día.',
         starTitle: 'El Lienzo del Cielo',
         imageUrl: Agosto09,
     },
     {
         id: 8.5,
         ...getRandomClusteredCoordinate(),
-        starName: 'Draco Caelum Tardis',
-        discoveryDate: new Date('2025-08-09T00:00:00'),
+        starName: 'Leo Minor', // (En honor al cumpleaños de Leo)
+        discoveryDate: new Date('2025-08-09T15:00:00'),
         dedication:
-            'Ese mismo dia, fuimos corriendo a buscar un regalo para el cumpleaños de leo, la pasamos muy bonito jugando, riendo conviviendo, me senti tan feliz ese dia celebrando, ganandome mas y mas a tus hermanitos, abuelitos, y toda tu familia, sintiendome en casa, atesorando cada segundo deseando no terminara, terminaste cansadita por nadar durante la mañana, solo queria abrazarte y que durmieras sobre mis hombros, terminando el hermoso dia, con un presente el cual te hizo recordar momentos de tu infancia.',
+            'Ese mismo día, fuimos corriendo a buscar un regalo para el cumpleaños de Leo. La pasamos muy bonito jugando, riendo, conviviendo. Me sentí tan feliz celebrando, ganándome más y más a tus hermanitos, abuelitos y toda tu familia, sintiéndome en casa, atesorando cada segundo y deseando que no terminara. Terminaste cansadita por nadar durante la mañana; solo quería abrazarte y que durmieras sobre mis hombros. Terminamos el hermoso día con un presente que te hizo recordar momentos de tu infancia.',
         starTitle: 'El Lienzo de una familia',
         imageUrl: Agosto09Tarde,
     },
     {
         id: 9,
         ...getRandomClusteredCoordinate(),
-        starName: 'Serpens Eridani',
+        starName: 'Symphonia Studiosa', // (Latín para "Sinfonía de Estudio")
         discoveryDate: new Date('2025-08-15T00:00:00'),
         dedication:
-            'Un dia como pudiera ser cualquier otro dia, no podriamos vernos ya que ambos estariamos ocupados, aun asi, me propusiste que trabajaramos en una llamada, con musica, tal vez para algunas personas este gesto no signifique mucho, pero para mi, fue algo hermoso, ese dia abrumado por pendientes, me senti acompañado, senti que todo saldria bien, disfrute tu musica, codifique al ritmo de ella mientras detras veia lo talentosa que eres, la pasion que te representa al hacer lo que amas.',
+            'Un día que pudo ser como cualquier otro. No podríamos vernos ya que ambos estaríamos ocupados. Aun así, me propusiste que trabajáramos en una llamada, con música. Tal vez para algunas personas este gesto no signifique mucho, pero para mí fue algo hermoso. Ese día, abrumado por pendientes, me sentí acompañado, sentí que todo saldría bien. Disfruté tu música, codifiqué a su ritmo mientras, detrás, veía lo talentosa que eres y la pasión que te representa al hacer lo que amas.',
         starTitle: 'Nuestro Camino Musical',
         imageUrl: Agosto15,
     },
     {
         id: 10,
         ...getRandomClusteredCoordinate(),
-        starName: 'Aquila Major',
+        starName: 'Astrum Propinquum', // (Latín para "Estrella Cercana")
         discoveryDate: new Date('2025-08-16T00:00:00'),
         dedication:
-            'Pasamos la tarde demostrando nuestro amor, preparandonos para una noche de ciencia con tus hermanitos, ese dia observariamos astros en el cielo, desde estrellas distantes a miles de años luz de distancia, hasta planetas a pocos minutos luz y nuestro satelite tan cerca como poco mas de 1 segundo luz, no sin antes tener una linda cena en donde comenzariamos a tomarnos nuestras primeras fotos con intencion de recordarlas por siempre.',
+            'Pasamos la tarde demostrando nuestro amor, preparándonos para una noche de ciencia con tus hermanitos. Ese día observaríamos astros en el cielo, desde estrellas distantes a miles de años luz, hasta planetas a pocos minutos luz y nuestro satélite a poco más de un segundo luz; no sin antes tener una linda cena en donde comenzaríamos a tomarnos nuestras primeras fotos con la intención de recordarlas por siempre.',
         starTitle: 'Noche Estrellada',
         imageUrl: Agosto16,
     },
     {
         id: 11,
         ...getRandomClusteredCoordinate(),
-        starName: 'Noctua Silente',
+        starName: 'Aurora Prima', // (Latín para "El Primer Amanecer")
         discoveryDate: new Date('2025-08-17T00:00:00'),
         dedication:
-            'Por la sabiduría encontrada en la calma de la noche, al estar junto a ti hasta el amanecer disfrutando de lo que el universo pone a disposicion de nuestros ojos, fue la primera vez que desperte a tu lado, la primera vez que apreciamos juntos el cielo nocturno junto a tus hermanitos y mamá, es un dia que jamas voy a olvidar',
+            'Por la sabiduría encontrada en la calma de la noche, al estar junto a ti hasta el amanecer disfrutando de lo que el universo pone a disposición de nuestros ojos. Fue la primera vez que desperté a tu lado, la primera vez que apreciamos juntos el cielo nocturno con tus hermanitos y tu mamá. Es un día que jamás voy a olvidar.',
         starTitle: 'Sabiduría Nocturna',
         imageUrl: Agosto17Noche,
     },
     {
         id: 12,
         ...getRandomClusteredCoordinate(),
-        starName: 'Andromeda Prime',
+        starName: 'Iter Manuum', // (Latín para "El Camino de las Manos")
         discoveryDate: new Date('2025-08-20T00:00:00'),
         dedication:
-            'Recorriendo el universo tomado de tu mano, nuestro primer viaje al zoologico caminando por horas y siendo atacados por mosquitos gigantes, no podia dejar de atesorar tu mirada, cada paso que dabamos lo haciamos de la mano, aprendimos tantas cosas ese dia, descubriendo especies que estaban en libertas, preparandonos para nuestro primer viaje juntos, ese ultimo camino que tomamos antes de irnos a almorzar fue tomando tu mano, quiero tomarla por cada dia a tu lado.',
-        starTitle: 'Caminado de tu mano',
+            'Recorriendo el universo tomado de tu mano, nuestro primer viaje al zoológico, caminando por horas y siendo atacados por mosquitos gigantes. No podía dejar de atesorar tu mirada. Cada paso que dábamos, lo hacíamos de la mano. Aprendimos tantas cosas ese día, descubriendo especies que estaban en libertad, preparándonos para nuestro primer viaje juntos. Ese último camino que tomamos antes de irnos a almorzar fue tomando tu mano. Quiero tomarla cada día que esté a tu lado.',
+        starTitle: 'Caminando de tu mano',
         imageUrl: Agosto20,
     },
     {
         id: 13,
         ...getRandomClusteredCoordinate(),
-        starName: 'Corvus Minor',
+        starName: 'Socius Itinere', // (Latín para "Compañeros de Viaje")
         discoveryDate: new Date('2025-08-22T00:00:00'),
         dedication:
-            'Nuestro primer viaje juntos, posible gracias a la confianza que tus abuelos depositaron en mi, recorriendo otros caminos juntos, pasando por altos y bajos difrutando de nuestro cariño y compañia, haciendo chistes, riendo, aprendiendo, y disfrutando de nuestra compañia, sacandonos fotos tan lindas y memorables por siempre, gracias por los secretos, los chistes, las risas compartidas y la complicidad que nos define.',
+            'Nuestro primer viaje juntos, posible gracias a la confianza que tus abuelos depositaron en mí. Recorriendo otros caminos, pasando por altos y bajos, disfrutando de nuestro cariño y compañía, haciendo chistes, riendo, aprendiendo y gozando de nuestra presencia. Nos sacamos fotos tan lindas y memorables para siempre. Gracias por los secretos, los chistes, las risas compartidas y la complicidad que nos define.',
         starTitle: 'Complicidad en otros caminos',
         imageUrl: Agosto22,
     },
     {
         id: 14,
         ...getRandomClusteredCoordinate(),
-        starName: "Aethelgard's Wish",
+        starName: 'Speculum Animae', // (Latín para "Espejo del Alma")
         discoveryDate: new Date('2025-08-22T15:00:00'),
         dedication:
-            'Un deseo susurrado a la estrella más noble, estar a tu lado siempre, incluso cuando el lugar en el que estamos nos haga reflexionar sobre lo que nos rodea, no dejar de sonreir a tu lado, compartiendo cada momento junto a ti hasta el fin de los dias, llegamos a este lugar, que aunque parecia que nos dejaria tristes sonreimos al tenernos juntos y compartir ese sentimiento, juntos todo se siente mejor.',
-        starTitle: 'Un lugar de reflexion y amor',
+            'Un deseo susurrado a la estrella más noble: estar a tu lado siempre, incluso cuando el lugar en el que estamos nos haga reflexionar sobre lo que nos rodea. No dejar de sonreír a tu lado, compartiendo cada momento junto a ti hasta el fin de los días. Llegamos a este lugar, que aunque parecía que nos dejaría tristes, sonreímos al tenernos el uno al otro y compartir ese sentimiento. Juntos todo se siente mejor.',
+        starTitle: 'Un lugar de reflexión y amor',
         imageUrl: Agosto22Zoo,
     },
     {
         id: 15,
         ...getRandomClusteredCoordinate(),
-        starName: 'Solara Ignis',
+        starName: 'Mundus Solus', // (Latín para "Un Mundo Solitario/Para Nosotros")
         discoveryDate: new Date('2025-08-22T17:00:00'),
         dedication:
-            'Despues de un largo recorrido, llegamos a un luegar en el que el resto del mundo no existia, solo nos veiamos tu y yo, disfrutando una exposicion de cera, con chistes de como no se parecian a las personas que representaban, fue con este abrazo que mi dia se volvio unico, sintiendo un fuego que nos mantiene cálidos para aventurarnos a lo desconocido, sin miedo alguno, para mi, fue al siguiente momento en el que fuimos al rey del cebiche, ya que temia que no me gustara por no comer mariscos, fue delicioso almorzar a tu lado viendo tu dulce carita.',
+            'Después de un largo recorrido, llegamos a un lugar en el que el resto del mundo no existía; solo nos veíamos tú y yo. Disfrutando una exposición de cera, con chistes de cómo no se parecían a las personas que representaban. Fue con este abrazo que mi día se volvió único, sintiendo un fuego que nos mantiene cálidos para aventurarnos a lo desconocido, sin miedo alguno. Para mí, el siguiente momento especial fue cuando fuimos al Rey del Ceviche, ya que temía que no me gustara por no comer mariscos. Fue delicioso almorzar a tu lado viendo tu dulce carita.',
         starTitle: 'Un mundo solo para nosotros',
         imageUrl: Agosto22Museo,
     },
     {
         id: 16,
         ...getRandomClusteredCoordinate(),
-        starName: 'Fioritura Celeste',
+        starName: 'Flos Caelestis', // (Latín para "Flor Celestial")
         discoveryDate: new Date('2025-08-22T23:00:00'),
         dedication:
-            'Como una flor que se abre en el jardín del cosmos enfrentandose al caos, regresando con el tiempo medido buscando una forma de que estuvieras comoda en el regreso a casa, mantuvimos la calma tomados de la mano, hasta encontrar una solucion, regresamos sanos y salvos a casa con un nuevo aprendizaje, con nuevos sentimientos de amor, al sentirte como una dulce flor a quien quiero cuidar siempre, porque eres mi flor en el cosmos.',
+            'Como una flor que se abre en el jardín del cosmos enfrentándose al caos. Regresando con el tiempo medido, buscando una forma de que estuvieras cómoda en el viaje a casa, mantuvimos la calma tomados de la mano hasta encontrar una solución. Regresamos sanos y salvos a casa con un nuevo aprendizaje, con nuevos sentimientos de amor, al sentirte como una dulce flor a quien quiero cuidar siempre, porque eres mi flor en el cosmos.',
         starTitle: 'Regreso a nuestra cuna de amor',
         imageUrl: Agosto22Camion,
     },
     {
         id: 17,
         ...getRandomClusteredCoordinate(),
-        starName: 'Kairos Alpha',
+        starName: 'Admiratio', // (Latín para "Admiración")
         discoveryDate: new Date('2025-08-23T00:00:00'),
         dedication:
-            'Por el momento perfecto, el instante justo en que supe que eres mas que maravillosa, desde un inicio me enamore de lo increible que eres, lo creativa, lo apasionada, lo adorable, lo hermosa, este dia, me leiste cuentos en japones, permitiendome admirar tu esfuerzo y talento, por este idioma que adoras, viendo tu sonrisa y tus nervios al leerme, y aun con ello atreviendote a hacerlo, siempre te admirare y atesorare cada uno de tus gestos, cada uno de ellos es una cura en mi corazon.',
+            'Por el momento perfecto, el instante justo en que supe que eres más que maravillosa. Desde un inicio me enamoré de lo increíble que eres: lo creativa, lo apasionada, lo adorable, lo hermosa. Este día me leíste cuentos en japonés, permitiéndome admirar tu esfuerzo y talento por este idioma que adoras, viendo tu sonrisa y tus nervios al leerme y, aun con ello, atreviéndote a hacerlo. Siempre te admiraré y atesoraré cada uno de tus gestos; cada uno de ellos es una cura en mi corazón.',
         starTitle: 'El Momento Exacto',
         imageUrl: Agosto23,
     },
     {
         id: 18,
         ...getRandomClusteredCoordinate(),
-        starName: 'Amethysta IX',
+        starName: 'Thesaurus Cordis', // (Latín para "Tesoro del Corazón")
         discoveryDate: new Date('2025-08-30T00:00:00'),
         dedication:
-            'Un tesoro precioso, de un color que no se encuentra en ningún otro lugar, aquello que quiero cuidar siempre, el dia en el que comimos pozole hecho por tus abuelitos, un dia mas con tu linda familia, dia en el que me aceptaron completamente creciendo cada vez mas, este dia ademas de llevarme ese tesoro en mi corazon, nos llevamos un tesoro ganado en la loteria, ganando juntos una partida a la vez, gracias por tan hermoso regalo, te amo',
+            'Un tesoro precioso, de un color que no se encuentra en ningún otro lugar, aquello que quiero cuidar siempre. El día en el que comimos pozole hecho por tus abuelitos, un día más con tu linda familia, un día en el que me aceptaron completamente, creciendo cada vez más. Este día, además de llevarme ese tesoro en mi corazón, nos llevamos un premio ganado en la lotería, ganando juntos una partida a la vez. Gracias por tan hermoso regalo, te amo.',
         starTitle: 'Tesoro Único',
         imageUrl: Agosto30,
     },
     {
         id: 19,
         ...getRandomClusteredCoordinate(),
-        starName: 'Elysian Echo',
+        starName: 'Risus Aeternus', // (Latín para "Risa Eterna")
         discoveryDate: new Date('2025-08-31T00:00:00'),
         dedication:
-            'El eco de una risa que resuena en la eternidad, la primera vez que estuvimos con nuestros amigos como novios, festejando el logro de uno de ellos, tomados de la mano sonriendo felices por una montaña de emociones, un dia inolvidable en el que incluso mis padres reaccionaron con corazones por vernos felices juntos, esa sonrisa es la que quiero ver el resto de mis dias.',
-        starTitle: 'Tu risa aquello que siempre espere.',
+            'El eco de una risa que resuena en la eternidad. La primera vez que estuvimos con nuestros amigos como novios, festejando el logro de uno de ellos, tomados de la mano, sonriendo felices por una montaña de emociones. Un día inolvidable en el que incluso mis padres reaccionaron con corazones por vernos felices juntos. Esa sonrisa es la que quiero ver el resto de mis días.',
+        starTitle: 'Tu risa, aquello que siempre esperé.',
         imageUrl: Agosto31,
     },
     {
         id: 20,
         ...getRandomClusteredCoordinate(),
-        starName: 'Argentum Futuris',
+        starName: 'Argentum Futuris', // (Latín para "Futuro Plateado/Brillante")
         discoveryDate: new Date('2025-09-08T00:00:00'),
         dedication:
-            'Llegamos a este dia, cumpliendo un mes de iniciar nuestra historia como novios, pero teniendo mas tiempo de sentirnos en casa, felices como ambos merecemos, no se que es lo que venga para nuestro futuro, pero quiero estar ahi siempre que me lo permitas, viendote sonreir, abrazandote y atesorando tus risas y sonrisas, riendo con tus chistes, esuchando esa risa de locura, viendo esos ojitos de amor, sintiendo tus caricias con pasion, quiero seguir tomando tu mano, en cada uno de nuestros viajes y aventuras, llorando en nuestros hombros cuando lo sintamos necesario, exhalando cuando necesitemos liberar nuestros sentimientos mas profundos, amandote cada dia mas que el primer dia en el que nos dijimos te amo. ',
+            'Llegamos a este día, cumpliendo un mes de iniciar nuestra historia como novios, pero sintiéndonos en casa desde hace más tiempo, felices como ambos merecemos. No sé qué es lo que venga para nuestro futuro, pero quiero estar ahí siempre que me lo permitas: viéndote sonreír, abrazándote y atesorando tus risas, riendo con tus chistes, escuchando esa risa de locura, viendo esos ojitos de amor, sintiendo tus caricias con pasión. Quiero seguir tomando tu mano en cada uno de nuestros viajes y aventuras, llorando en nuestros hombros cuando lo sintamos necesario, exhalando cuando necesitemos liberar nuestros sentimientos más profundos, amándote cada día más que el primero en que nos dijimos "te amo".',
         starTitle: 'Tu Influencia hasta el fin del universo',
     },
 ];
