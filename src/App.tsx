@@ -10,6 +10,7 @@ import { generateConstellation } from './utils/graphGenerator';
 import Header from './components/Header';
 import ExploreButton from './components/ExploreButton';
 import ExploreModal from './components/ExplorerModal';
+import InstructionsModal from './components/InstructionsModal';
 type WindowSize = {
     width: number;
     height: number;
@@ -66,6 +67,20 @@ function App() {
 
     const [hoveredStar, setHoveredStar] = useState<StarProps | null>(null);
     const [clickedStar, setClickedStar] = useState<StarProps | null>(null);
+    const [showInstructions, setShowInstructions] = useState(false);
+
+    useEffect(() => {
+        const hasVisited = localStorage.getItem('hasVisitedUniverse');
+        if (!hasVisited) {
+            setShowInstructions(true);
+        }
+    }, []);
+
+    const handleCloseInstructions = () => {
+        localStorage.setItem('hasVisitedUniverse', 'true');
+        setShowInstructions(false);
+    };
+
     const [isExploreModalActive, setExploreModalActive] =
         useState<boolean>(false);
 
@@ -91,6 +106,7 @@ function App() {
 
     return (
         <>
+            <InstructionsModal isActive={showInstructions} onClose={handleCloseInstructions} />
             <Header />
             <ExploreButton onClick={toggleExploreModal} />
 
