@@ -1,4 +1,4 @@
-import {  memo } from 'react';
+import { memo } from 'react';
 import styles from '../styles/PrevisualizationModal.module.css';
 export type PrevisualizationProps = {
     isActive: boolean | null;
@@ -27,7 +27,7 @@ const PrevisualizationModal: React.FC<PrevisualizationProps> = ({
             className={`${styles.tooltipContainer} ${isActive ? styles.tooltipActive : ''}`}
             style={{
                 left: `${x}px`,
-                top: `${y}px`,
+                top: `${y - 20}px`,
             }}
         >
             <div className={styles.tooltipContent}>

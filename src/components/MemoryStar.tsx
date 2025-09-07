@@ -8,7 +8,7 @@ interface MemoryStarProps extends StarProps {
     onStarHover: (star: StarProps | null) => void;
 }
 
-const BASE_RADIUS = 12;
+const BASE_RADIUS = 10;
 const BASE_SHADOW_BLUR = 20;
 
 const MemoryStar: React.FC<MemoryStarProps> = ({

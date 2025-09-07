@@ -9,6 +9,7 @@ import { staticStars } from './data/constellation';
 import { generateConstellation } from './utils/graphGenerator';
 import Header from './components/Header';
 import ExploreButton from './components/ExploreButton';
+import ExploreModal from './components/ExplorerModal';
 type WindowSize = {
     width: number;
     height: number;
@@ -52,9 +53,25 @@ function App() {
         [runtimeStars]
     );
 
+    const sortedStars = useMemo(() => {
+        return [...runtimeStars].sort((a, b) => {
+            const dateComparison =
+                a.discoveryDate.getTime() - b.discoveryDate.getTime();
+            if (dateComparison !== 0) {
+                return dateComparison;
+            }
+            return a.starName.localeCompare(b.starName);
+        });
+    }, [runtimeStars]);
+
     const [hoveredStar, setHoveredStar] = useState<StarProps | null>(null);
     const [clickedStar, setClickedStar] = useState<StarProps | null>(null);
+    const [isExploreModalActive, setExploreModalActive] =
+        useState<boolean>(false);
 
+    const toggleExploreModal = () => {
+        setExploreModalActive((prev) => !prev);
+    };
     const handleStarClick = (star: StarProps | null) => {
         setClickedStar(star);
     };
@@ -66,10 +83,16 @@ function App() {
         setHoveredStar(star);
     };
 
+    const handleModalStarClick = (star: StarProps | null) => {
+        handleStarClick(star);
+        setExploreModalActive(false);
+        setHoveredStar(null);
+    };
+
     return (
         <>
             <Header />
-            <ExploreButton />
+            <ExploreButton onClick={toggleExploreModal} />
 
             <Stage width={windowSize.width} height={windowSize.height}>
                 <Layer>
@@ -89,6 +112,14 @@ function App() {
                 starTitle={hoveredStar?.starTitle ?? ''}
                 discoveryDate={hoveredStar?.discoveryDate ?? new Date()}
             />
+            <ExploreModal
+                isActive={isExploreModalActive}
+                stars={sortedStars}
+                hoveredStarId={hoveredStar?.id ?? null}
+                onStarHover={handleStarHover}
+                onStarClick={handleModalStarClick}
+            />
+
             <DedicationModal
                 isActive={!!clickedStar}
                 star={clickedStar!}
