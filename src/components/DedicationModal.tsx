@@ -38,6 +38,7 @@ const DedicationModal: React.FC<DedicationModalProps> = ({
                         src={star.imageUrl}
                         alt={`Imagen para ${star.starName}`}
                         className={styles.modalImage}
+                        loading='lazy'
                     />
                 )}
 
