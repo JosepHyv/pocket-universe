@@ -98,6 +98,7 @@ function App() {
                 <Layer>
                     <ConstelationDrawer StarCordinates={constelationCoors} />
                     <StarsDrawer
+                        hoveredStarId={hoveredStar?.id ?? null}
                         stars={runtimeStars}
                         onStarHover={handleStarHover}
                         onStarClick={handleStarClick}

@@ -1,19 +1,5 @@
 import type { StarProps } from '../types/StarProperties';
-
-// const getRandomClusteredCoordinate = (): { x: number; y: number } => {
-//     let x, y;
-//     do {
-//         x = Math.random();
-//         y = Math.random();
-//     } while (
-//         (x < 0.15 && y < 0.15) ||
-//         (x > 0.85 && y > 0.85) ||
-//         (x > 0.85 && y < 0.15) ||
-//         (x < 0.15 && y > 0.85)
-//     );
-//     return { x, y };
-// };
-
+import CamilaRetrato from '../assets/camila-retrato.jpeg';
 const getRandomClusteredCoordinate = (): { x: number; y: number } => {
     const margin = 0.18;
 
@@ -25,33 +11,17 @@ const getRandomClusteredCoordinate = (): { x: number; y: number } => {
     return { x, y };
 };
 
-// const getRandomClusteredCoordinate = (
-//     centerX: number = 0.5,
-//     centerY: number = 0.5,
-//     minRadius: number = 0.1,
-//     maxRadius: number = 0.9
-// ): { x: number; y: number } => {
-//     const angle = Math.random() * 2 * Math.PI;
-//     const radius = Math.random() * (maxRadius - minRadius) + minRadius;
-//
-//     const x = centerX + radius * Math.cos(angle);
-//     const y = centerY + radius * Math.sin(angle);
-//
-//     return {
-//         x: Math.max(0.05, Math.min(0.95, x)),
-//         y: Math.max(0.05, Math.min(0.95, y)),
-//     };
-// };
-
 export const staticStars: StarProps[] = [
     {
         id: 1,
         x: 0.5,
         y: 0.5,
         starName: 'Corazón de la Galaxia',
-        discoveryDate: new Date('2024-05-10T20:00:00'),
-        dedication: 'El punto de partida de nuestro universo.',
-        starTitle: 'El Inicio',
+        discoveryDate: new Date('2025-08-08T00:00:00'),
+        dedication:
+            'Este dia inicio una hermosa historia, recuerdo bien que este dia desperte con las piernas temblorosas, preocupado por lo que este dia significaria de ese momento en adelante, me levante temprano, a pesar de haberme desvelado, prepare las cosas para ir a nuestro dia de picnic, habia preparado una linda dinamica y habia repasado como te propondria iniciarla, hice monton de escenarios en mi mente para que todo fuera lo mas especial para ti, cuando llegaste a casa, senti que mi corazon explotaba, tembloroso porque aun no terminaba la comida, llegamos al picnic, disfrutamos, y comenzamos la dinamica, en ella me humillaste dibujando, pero logre decirte todo lo que sentia, fue un dia inolvidable tus lagrimas de alegria y besos con fantasticas obras de arte',
+        starTitle: 'El dia que todo comenzó',
+        imageUrl: CamilaRetrato,
     },
     // {
     //     id: 2,

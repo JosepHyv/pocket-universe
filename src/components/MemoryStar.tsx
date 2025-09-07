@@ -1,9 +1,10 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Circle } from 'react-konva';
 import type { StarProps } from '../types/StarProperties';
 import Konva from 'konva';
 
 interface MemoryStarProps extends StarProps {
+    isExternallyHovered: boolean;
     onStarClick: (star: StarProps | null) => void;
     onStarHover: (star: StarProps | null) => void;
 }
@@ -14,10 +15,43 @@ const BASE_SHADOW_BLUR = 20;
 const MemoryStar: React.FC<MemoryStarProps> = ({
     onStarClick,
     onStarHover,
+    isExternallyHovered,
     ...star
 }) => {
     const starRef = useRef<Konva.Circle>(null);
     const pulseTweenRef = useRef<Konva.Tween | null>(null);
+    const [isLocallyHovered, setIsLocallyHovered] = useState<boolean>(false);
+
+    const isHighlighted = isLocallyHovered || isExternallyHovered;
+
+    useEffect(() => {
+        const stage = starRef.current?.getStage();
+        if (!stage) return;
+
+        if (isHighlighted) {
+            stage.container().style.cursor = 'pointer';
+            pulseTweenRef.current?.pause();
+            starRef.current?.to({
+                duration: 0.3,
+                easing: Konva.Easings.EaseInOut,
+                shadowBlur: BASE_SHADOW_BLUR * (1 + (Math.random() * 0.15 + 0.75)),
+                scaleX: 1.5,
+                scaleY: 1.5,
+                fill: '#FFD700',
+            });
+        } else {
+            stage.container().style.cursor = 'default';
+            starRef.current?.to({
+                duration: 0.5,
+                easing: Konva.Easings.EaseInOut,
+                shadowBlur: BASE_SHADOW_BLUR,
+                scaleX: 1,
+                scaleY: 1,
+                fill: '#fff',
+            });
+            pulseTweenRef.current?.play();
+        }
+    }, [isHighlighted]);
 
     useEffect(() => {
         if (!starRef.current) return;
@@ -53,10 +87,11 @@ const MemoryStar: React.FC<MemoryStarProps> = ({
             duration: 0.3,
             easing: Konva.Easings.EaseInOut,
             shadowBlur: BASE_SHADOW_BLUR * (1 + (Math.random() * 0.15 + 0.75)),
-            scaleX: 1.5, 
+            scaleX: 1.5,
             scaleY: 1.5,
             fill: '#FFD700',
         });
+        setIsLocallyHovered(true);
         onStarHover(star); //{ id, x, y, discoveryDate, starName });
     };
 
@@ -74,6 +109,7 @@ const MemoryStar: React.FC<MemoryStarProps> = ({
         });
 
         pulseTweenRef.current?.play();
+        setIsLocallyHovered(false);
         onStarHover(null);
     };
 
