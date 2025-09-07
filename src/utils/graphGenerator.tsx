@@ -26,7 +26,6 @@ export function generateConstellation(stars: StarProps[]): Coordinates[] {
     for (let i = 0; i < sortedStars.length - 1; i++) {
         const star1 = sortedStars[i];
         const star2 = sortedStars[i + 1];
-        console.log(Math.abs(star1.x - star2.x));
         if (Math.abs(star1.x - star2.x) <= 275) {
             connections.push({
                 x1: star1.x,
