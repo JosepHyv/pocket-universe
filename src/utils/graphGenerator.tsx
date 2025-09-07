@@ -20,18 +20,21 @@ export function generateConstellation(stars: StarProps[]): Coordinates[] {
         }))
         .sort((a, b) => a.angle - b.angle);
     // const sortedStars = stars.sort((a, b) =>
-    //     a.x != b.x ? a.x - b.x : a.y - b.y
+    //     a.x !== b.x ? a.x - b.x : a.y - b.y
     // );
     const connections: Coordinates[] = [];
     for (let i = 0; i < sortedStars.length - 1; i++) {
         const star1 = sortedStars[i];
         const star2 = sortedStars[i + 1];
-        connections.push({
-            x1: star1.x,
-            y1: star1.y,
-            x2: star2.x,
-            y2: star2.y,
-        });
+        console.log(Math.abs(star1.x - star2.x));
+        if (Math.abs(star1.x - star2.x) <= 275) {
+            connections.push({
+                x1: star1.x,
+                y1: star1.y,
+                x2: star2.x,
+                y2: star2.y,
+            });
+        }
     }
 
     // const firstStar = sortedStars[0];
