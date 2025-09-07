@@ -68,7 +68,17 @@ function App() {
     const [hoveredStar, setHoveredStar] = useState<StarProps | null>(null);
     const [clickedStar, setClickedStar] = useState<StarProps | null>(null);
     const [showInstructions, setShowInstructions] = useState(false);
-
+useEffect(() => {
+    console.log("Iniciando precarga de imágenes...");
+    
+    staticStars.forEach(star => {
+      // Solo precargamos si la estrella tiene una imageUrl
+      if (star.imageUrl) {
+        const img = new Image();
+        img.src = star.imageUrl;
+      }
+    });
+  }, [])
     useEffect(() => {
         const hasVisited = localStorage.getItem('hasVisitedUniverse');
         if (!hasVisited) {
@@ -106,7 +116,10 @@ function App() {
 
     return (
         <>
-            <InstructionsModal isActive={showInstructions} onClose={handleCloseInstructions} />
+            <InstructionsModal
+                isActive={showInstructions}
+                onClose={handleCloseInstructions}
+            />
             <Header />
             <ExploreButton onClick={toggleExploreModal} />
 
