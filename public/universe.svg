@@ -1,0 +1,33 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#89CFF0" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+        </filter>
+    </defs>
+
+    <circle cx="50" cy="50" r="18" fill="url(#glowGradient)" filter="url(#softGlow)"/>
+
+    <path d="M50 35L53.5 46.5L65 50L53.5 53.5L50 65L46.5 53.5L35 50L46.5 46.5L50 35Z" fill="#FFFFFF"/>
+    <path d="M50 38L52.3 47.7L62 50L52.3 52.3L50 62L47.7 52.3L38 50L47.7 47.7L50 38Z" fill="#bde0fe"/>
+
+    <ellipse 
+        cx="50" 
+        cy="50" 
+        rx="38" 
+        ry="28" 
+        stroke="#FFFFFF" 
+        stroke-opacity="0.5" 
+        stroke-width="1.5" 
+        stroke-dasharray="4 6" 
+        transform="rotate(-25 50 50)"
+    />
+
+    <g transform="translate(15, 28)">
+        <path d="M0 0L1 3L2 0L3 3L4 0L3 -3L2 0L1 -3L0 0Z" fill="#FFD700"/>
+        <circle cx="2" cy="0" r="3" fill="#FFD700" filter="url(#softGlow)"/>
+    </g>
+</svg>
