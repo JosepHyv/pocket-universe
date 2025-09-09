@@ -19,6 +19,7 @@ import Agosto22Zoo from '../assets/media/agosto_22_zoo.webp';
 import Agosto23 from '../assets/media/agosto_23.webp';
 import Agosto30 from '../assets/media/agosto_30.webp';
 import Agosto31 from '../assets/media/agosto_31.webp';
+import Septiembre08 from '../assets/media/Septiembre_8.webp';
 const getRandomClusteredCoordinate = (): { x: number; y: number } => {
     const margin = 0.18;
 
@@ -240,5 +241,6 @@ export const staticStars: StarProps[] = [
         dedication:
             'Llegamos a este día, cumpliendo un mes de iniciar nuestra historia como novios, pero sintiéndonos en casa desde hace más tiempo, felices como ambos merecemos. No sé qué es lo que venga para nuestro futuro, pero quiero estar ahí siempre que me lo permitas: viéndote sonreír, abrazándote y atesorando tus risas, riendo con tus chistes, escuchando esa risa de locura, viendo esos ojitos de amor, sintiendo tus caricias con pasión. Quiero seguir tomando tu mano en cada uno de nuestros viajes y aventuras, llorando en nuestros hombros cuando lo sintamos necesario, exhalando cuando necesitemos liberar nuestros sentimientos más profundos, amándote cada día más que el primero en que nos dijimos "te amo".',
         starTitle: 'Tu Influencia hasta el fin del universo',
+        imageUrl:Septiembre08
     },
 ];
